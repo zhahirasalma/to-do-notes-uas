@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/to-do-notes-uas/static/css/main.f970b54f.chunk.css",
+    "main.js": "/to-do-notes-uas/static/js/main.e5256926.chunk.js",
+    "main.js.map": "/to-do-notes-uas/static/js/main.e5256926.chunk.js.map",
+    "runtime-main.js": "/to-do-notes-uas/static/js/runtime-main.0558b3ad.js",
+    "runtime-main.js.map": "/to-do-notes-uas/static/js/runtime-main.0558b3ad.js.map",
+    "static/js/2.476c21bb.chunk.js": "/to-do-notes-uas/static/js/2.476c21bb.chunk.js",
+    "static/js/2.476c21bb.chunk.js.map": "/to-do-notes-uas/static/js/2.476c21bb.chunk.js.map",
+    "index.html": "/to-do-notes-uas/index.html",
+    "precache-manifest.9ae3d9958230719c33b29085054d3d01.js": "/to-do-notes-uas/precache-manifest.9ae3d9958230719c33b29085054d3d01.js",
+    "service-worker.js": "/to-do-notes-uas/service-worker.js",
+    "static/css/main.f970b54f.chunk.css.map": "/to-do-notes-uas/static/css/main.f970b54f.chunk.css.map",
+    "static/js/2.476c21bb.chunk.js.LICENSE.txt": "/to-do-notes-uas/static/js/2.476c21bb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0558b3ad.js",
+    "static/js/2.476c21bb.chunk.js",
+    "static/css/main.f970b54f.chunk.css",
+    "static/js/main.e5256926.chunk.js"
+  ]
+}
