@@ -12,13 +12,13 @@ export const registerUserAPI = (data) => (dispatch) => {
     return (
         firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
         .then(res => {
-            console.log('success: ', res);
+           alert('success: ', res);
             dispatch({type: 'CHANGE_LOADING', value: false})
         })
         .catch(function(error){
             var errorCode = error.code;
             var errorMessage = error.message;
-            console.log(errorCode, errorMessage);
+            alert(errorCode, errorMessage);
             dispatch({type: 'CHANGE_LOADING', value: false})
         })
     )
@@ -29,7 +29,7 @@ export const LoginUserAPI = (data) => (dispatch) => {
         dispatch({type: 'CHANGE_LOADING', value: true})
         firebase.auth().signInWithEmailAndPassword(data.email, data.password)
         .then(res => {
-            // console.log('success: ', res);
+           alert('success: ', res);
             const dataUser = {
                 email: res.user.email,
                 uid: res.user.uid,
@@ -44,7 +44,7 @@ export const LoginUserAPI = (data) => (dispatch) => {
         .catch(function(error){
             var errorCode = error.code;
             var errorMessage = error.message;
-            console.log(errorCode, errorMessage);
+            alert(errorCode, errorMessage);
             dispatch({type: 'CHANGE_LOADING', value: false})
             dispatch({type: 'CHANGE_LOGIN', value: false})
             reject(false)
@@ -65,15 +65,17 @@ export const getDataFromAPI = (userId) => (dispatch) => {
     return new Promise((resolve,reject) => {
         urlNotes.on('value', function(snapshot) {
             console.log('get Data: ',snapshot.val());
-            const data = [];
-            Object.keys(snapshot.val()).map(key => {
-                data.push({
-                    id: key,
-                    data: snapshot.val()[key]
+            if (snapshot.val()!==null) {
+                const data = [];
+                Object.keys(snapshot.val()).map(key => {
+                    data.push({
+                        id: key,
+                        data: snapshot.val()[key]
+                    })
                 })
-            });
-            dispatch({type: 'SET_NOTES', value: data})
-            resolve(snapshot.val())
+                dispatch({type: 'SET_NOTES', value: data})
+                resolve(snapshot.val())
+            }
         });
     })
     
